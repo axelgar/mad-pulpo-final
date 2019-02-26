@@ -1,0 +1,89 @@
+.team-brief {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  h2{
+    position: relative;
+    text-align: left;
+    align-self: start;
+    font-weight: 700;
+    margin-bottom: 80px;
+
+    &::before {
+      content: '';
+      left: 0px;
+      right: initial;
+      width: 30px;
+      top: initial;
+      bottom: calc(100% + 25px);
+      height: 3px;
+      border-radius: 2px;
+      background-color: $color-main-orange;
+      position: absolute;
+    }
+  }
+
+  .types-container {
+    margin-bottom: 20px;
+  }
+}
+
+// #about {
+//   height: $display-all-viewport;
+//   scroll-snap-align: start;
+//   background-color: $color-main-light;
+//   padding-top: 20px;
+//   display: flex;
+
+//   .about-team {
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     width: 100%;
+//   }
+
+//   article {
+//     max-width: 400px;
+//     margin-bottom: 55px;
+//     height: 100vh;
+//     p {
+//       margin-bottom: 30px;
+//     }
+//   }
+
+//   .team-brief {
+
+//     p {
+//       font-size: 30px;
+//       line-height: 40px;
+//     }
+//   }
+
+//   .team-goals {
+//     text-align: right;
+//     p {
+//       font-size: 18px;
+//       line-height: 23px;
+//     }
+//   }
+  
+// }
+
+// #team {
+//   height: $display-all-viewport;
+//   scroll-snap-align: start;
+// }
+
+// #proects {
+//   height: $display-all-viewport;
+//   scroll-snap-align: start;
+// }

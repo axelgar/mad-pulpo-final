@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  background-color: $color-main-orange;
+  color: $color-main-light;
+  border-radius: 30px;
+  padding: 20px 35px;
+  transition: all .7s ease;
+  border: 2px solid $color-main-light;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-main-orange;
+    border: 2px solid $color-main-orange;
+  }
+}
+
