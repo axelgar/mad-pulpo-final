@@ -10,80 +10,81 @@
     line-height: 32px;
   }
 
-  h2{
-    position: relative;
-    text-align: left;
-    align-self: start;
-    font-weight: 700;
-    margin-bottom: 80px;
-
-    &::before {
-      content: '';
-      left: 0px;
-      right: initial;
-      width: 30px;
-      top: initial;
-      bottom: calc(100% + 25px);
-      height: 3px;
-      border-radius: 2px;
-      background-color: $color-main-orange;
-      position: absolute;
-    }
-  }
-
   .types-container {
     margin-bottom: 20px;
   }
 }
 
-// #about {
-//   height: $display-all-viewport;
-//   scroll-snap-align: start;
-//   background-color: $color-main-light;
-//   padding-top: 20px;
-//   display: flex;
+.team-goals {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
-//   .about-team {
-//     display: flex;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     align-items: center;
-//     width: 100%;
-//   }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
 
-//   article {
-//     max-width: 400px;
-//     margin-bottom: 55px;
-//     height: 100vh;
-//     p {
-//       margin-bottom: 30px;
-//     }
-//   }
+#team {
+  position: relative;
+  height: 100vh;
 
-//   .team-brief {
+  h2 {
+    position: absolute;
+    top: 410px;
+    left: 40px;
+    z-index: 10;
+  }
 
-//     p {
-//       font-size: 30px;
-//       line-height: 40px;
-//     }
-//   }
+  .glide {
+    margin-bottom: 70px;
+  }
 
-//   .team-goals {
-//     text-align: right;
-//     p {
-//       font-size: 18px;
-//       line-height: 23px;
-//     }
-//   }
-  
-// }
+  .axel {
+    background: url('images/axel.jpg') no-repeat 0 0;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position-x: center;
+  }
 
-// #team {
-//   height: $display-all-viewport;
-//   scroll-snap-align: start;
-// }
+  .franci {
+    background: url('images/franci.jpg') no-repeat 0 0;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position-x: center;
+  }
 
-// #proects {
-//   height: $display-all-viewport;
-//   scroll-snap-align: start;
-// }
+  .jonathan {
+    background: url('images/jonathan.jpg') no-repeat 0 0;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  article {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:nth-child(2) {
+      animation: name-fadein 6s infinite ease;
+    }
+
+    &:nth-child(3) {
+      animation: name-fadein 4s infinite ease 2s;
+    }
+
+    &:nth-child(1) {
+      animation: name-fadein 2s infinite ease 4s;
+    }
+  }
+}

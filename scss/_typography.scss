@@ -19,13 +19,18 @@ h2 {
 }
 
 h3 {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
 p {
   margin: 0;
   font-size: 25px;
   font-weight: 300;
+}
+
+.team-text {
+  font-size: 16px;
 }
 
 span {

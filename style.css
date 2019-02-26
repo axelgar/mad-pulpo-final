@@ -9,6 +9,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: #F8F8F8;
 }
 
 h1, h2, h3, h4 {
@@ -18,6 +19,15 @@ h1, h2, h3, h4 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
 }
 
 @keyframes pulpo {
@@ -40,10 +50,17 @@ a {
     filter: drop-shadow(0px -1px 1px rgba(0, 0, 0, 0.2));
   }
 }
+@keyframes name-fadein {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #site-header {
   padding: 30px 0;
   color: #262626;
-  background: #F8F8F8;
   text-align: center;
   height: 100vh;
   display: grid;
@@ -137,13 +154,18 @@ h2 {
 }
 
 h3 {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
 p {
   margin: 0;
   font-size: 25px;
   font-weight: 300;
+}
+
+.team-text {
+  font-size: 16px;
 }
 
 span {
@@ -162,27 +184,71 @@ span {
   font-size: 30px;
   line-height: 32px;
 }
-.team-brief h2 {
-  position: relative;
-  text-align: left;
-  align-self: start;
-  font-weight: 700;
-  margin-bottom: 80px;
-}
-.team-brief h2::before {
-  content: "";
-  left: 0px;
-  right: initial;
-  width: 30px;
-  top: initial;
-  bottom: calc(100% + 25px);
-  height: 3px;
-  border-radius: 2px;
-  background-color: #E58D16;
-  position: absolute;
-}
 .team-brief .types-container {
   margin-bottom: 20px;
+}
+
+.team-goals {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.team-goals p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+#team {
+  position: relative;
+  height: 100vh;
+}
+#team h2 {
+  position: absolute;
+  top: 410px;
+  left: 40px;
+  z-index: 10;
+}
+#team .glide {
+  margin-bottom: 70px;
+}
+#team .axel {
+  background: url("images/axel.jpg") no-repeat 0 0;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position-x: center;
+}
+#team .franci {
+  background: url("images/franci.jpg") no-repeat 0 0;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position-x: center;
+}
+#team .jonathan {
+  background: url("images/jonathan.jpg") no-repeat 0 0;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position-x: center;
+}
+#team article {
+  margin-bottom: 20px;
+}
+#team article:last-child {
+  margin: 0;
+}
+#team article:nth-child(2) {
+  animation: name-fadein 6s infinite ease;
+}
+#team article:nth-child(3) {
+  animation: name-fadein 4s infinite ease 2s;
+}
+#team article:nth-child(1) {
+  animation: name-fadein 2s infinite ease 4s;
 }
 
 .button {
@@ -198,6 +264,26 @@ span {
   background-color: transparent;
   color: #E58D16;
   border: 2px solid #E58D16;
+}
+
+.section-title {
+  position: relative;
+  text-align: left;
+  align-self: start;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+.section-title::before {
+  content: "";
+  left: 0px;
+  right: initial;
+  width: 30px;
+  top: initial;
+  bottom: calc(100% + 25px);
+  height: 3px;
+  border-radius: 2px;
+  background-color: #E58D16;
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */

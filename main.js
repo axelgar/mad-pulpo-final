@@ -8,6 +8,14 @@ const main = () => {
     typeSpeed: 100,
   });
 
+  const carouselDiv = document.querySelector('.glide');
+  new Glide('.glide', {
+    autoplay:true,
+    animationDuration: 2000,
+    type: 'carousel',
+    gap: 0
+  }).mount()
+
   const scrollDown = () => {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   };
