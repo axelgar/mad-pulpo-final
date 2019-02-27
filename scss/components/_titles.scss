@@ -18,3 +18,10 @@
     position: absolute;
   }
 }
+
+.project-title {
+  color: $color-main-orange;
+  &::before {
+    background-color: $color-main-dark;
+  }
+}

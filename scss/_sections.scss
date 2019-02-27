@@ -1,10 +1,12 @@
-.team-brief {
+.team {
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
 
+.team-brief {
   p {
     font-size: 30px;
     line-height: 32px;
@@ -16,12 +18,6 @@
 }
 
 .team-goals {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-
   p {
     font-size: 16px;
     line-height: 24px;
@@ -32,6 +28,7 @@
 #team {
   position: relative;
   height: 100vh;
+  margin-bottom: 110px;
 
   h2 {
     position: absolute;
@@ -44,26 +41,25 @@
     margin-bottom: 70px;
   }
 
-  .axel {
-    background: url('images/axel.jpg') no-repeat 0 0;
+  li > div {
     width: 100%;
     height: 400px;
+  }
+
+  .axel {
+    background: url('images/axel.jpg') no-repeat 0 0;
     background-size: cover;
     background-position-x: center;
   }
 
   .franci {
     background: url('images/franci.jpg') no-repeat 0 0;
-    width: 100%;
-    height: 400px;
     background-size: cover;
     background-position-x: center;
   }
 
   .jonathan {
     background: url('images/jonathan.jpg') no-repeat 0 0;
-    width: 100%;
-    height: 400px;
     background-size: cover;
     background-position-x: center;
   }
@@ -86,5 +82,50 @@
     &:nth-child(1) {
       animation: name-fadein 2s infinite ease 4s;
     }
+  }
+}
+
+#projects {
+  article {
+    margin-bottom: 50px;
+  }
+}
+
+#contact {
+  height: 100vh;
+  padding-top: 110px;
+
+  h2 {
+    line-height: 28px;
+  }
+
+  input{
+    border: none;
+    border-bottom: 2px solid $color-main-orange;
+    width: 100%;
+    background: $color-main-light;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 5px;
+
+  }
+
+  textarea {
+    border: 2px solid $color-main-orange;
+    width: 100%;
+    background: $color-main-light;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  label {
+    display: block;
+    text-transform: capitalize;
+  }
+
+  button {
+    display: block;
+    margin: auto;
   }
 }
