@@ -296,17 +296,17 @@ span {
   max-height: 400px;
 }
 #team .axel {
-  background: url("images/axel.jpg") no-repeat 0 0;
+  background: url("images/axel.webp") no-repeat 0 0;
   background-size: cover;
   background-position-x: center;
 }
 #team .franci {
-  background: url("images/franci.jpg") no-repeat 0 0;
+  background: url("images/franci.webp") no-repeat 0 0;
   background-size: cover;
   background-position-x: center;
 }
 #team .jonathan {
-  background: url("images/jonathan.jpg") no-repeat 0 0;
+  background: url("images/jonathan.webp") no-repeat 0 0;
   background-size: cover;
   background-position-x: center;
 }
@@ -329,17 +329,20 @@ span {
 #projects {
   padding-top: 110px;
   height: auto;
+  min-height: 100vh;
 }
 #projects article {
   padding-bottom: 30px;
 }
 
 #contact {
-  padding-top: 110px;
+  padding-top: 50px;
   position: relative;
 }
 #contact h2 {
-  line-height: 28px;
+  line-height: 25px;
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 #contact input {
   border: none;
