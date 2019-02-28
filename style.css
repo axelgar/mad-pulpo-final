@@ -167,6 +167,7 @@ li {
 
 #site-main {
   height: 100vh;
+  -webkit-overflow-scrolling: touch;
   overflow: scroll;
   -webkit-scroll-snap-type: mandatory;
   -webkit-scroll-snap-points-y: repeat(100vh);

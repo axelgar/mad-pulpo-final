@@ -53,6 +53,7 @@
 
 #site-main {
   height: $display-all-viewport;
+  -webkit-overflow-scrolling: touch;
   overflow: scroll;
   -webkit-scroll-snap-type: mandatory;
   -webkit-scroll-snap-points-y: repeat($display-all-viewport);
