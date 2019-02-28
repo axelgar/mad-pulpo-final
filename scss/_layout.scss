@@ -73,6 +73,7 @@
 .snap-container {
   scroll-snap-align: start;
   height: $display-all-viewport;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 @media (min-width: 768px) {

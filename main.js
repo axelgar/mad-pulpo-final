@@ -1,25 +1,37 @@
 'use strict';
 
 const main = () => {
-  const typedElement = document.querySelector('#typed')
-  const typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    loop: true,
-    typeSpeed: 100,
+
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
-  const carouselDiv = document.querySelector('.glide');
-  new Glide('.glide', {
-    autoplay:true,
-    animationDuration: 2000,
-    type: 'carousel',
-    gap: 0
-  }).mount()
+  const setTypedBehaviour = (domElement) => {
+    new Typed(domElement, {
+      stringsElement: '#typed-strings',
+      loop: true,
+      typeSpeed: 100,
+    });
+  }
+
+  const setCarousel = (element) => {
+    new Glide(element, {
+      autoplay:true,
+      animationDuration: 2000,
+      type: 'carousel',
+      gap: 0
+    }).mount()
+  }
+
+  setTypedBehaviour('#typed')
+  setCarousel('.glide')
 
   const scrollDown = () => {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   };
   const arrowDown = document.querySelector('.arrow-section');
+
   arrowDown.addEventListener('click', scrollDown);
 };
 

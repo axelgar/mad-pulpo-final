@@ -187,6 +187,7 @@ li {
 .snap-container {
   scroll-snap-align: start;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 @media (min-width: 768px) {
@@ -375,7 +376,7 @@ span {
   text-align: left;
   align-self: start;
   font-weight: 700;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .section-title::before {
   content: "";
