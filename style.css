@@ -168,7 +168,11 @@ li {
 #site-main {
   height: 100vh;
   overflow: scroll;
+  -webkit-scroll-snap-type: mandatory;
+  -webkit-scroll-snap-points-y: repeat(100vh);
   scroll-snap-points-y: repeat(100vh);
+  -webkit-scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
+  scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   scroll-snap-destination: 0 0;
   scroll-snap-type: y mandatory;
   scroll-snap-type: mandatory;
@@ -185,6 +189,7 @@ li {
 }
 
 .snap-container {
+  -webkit-scroll-snap-coordinate: 0% 0%;
   scroll-snap-align: start;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);

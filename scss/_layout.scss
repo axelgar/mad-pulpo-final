@@ -52,9 +52,13 @@
 }
 
 #site-main {
-  height: 100vh;
+  height: $display-all-viewport;
   overflow: scroll;
+  -webkit-scroll-snap-type: mandatory;
+  -webkit-scroll-snap-points-y: repeat($display-all-viewport);
   scroll-snap-points-y: repeat($display-all-viewport);
+  -webkit-scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
+  scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   scroll-snap-destination: 0 0;
   scroll-snap-type: y mandatory;
   scroll-snap-type: mandatory;
@@ -71,6 +75,7 @@
 }
 
 .snap-container {
+  -webkit-scroll-snap-coordinate: 0% 0%;
   scroll-snap-align: start;
   height: $display-all-viewport;
   height: calc(var(--vh, 1vh) * 100);
