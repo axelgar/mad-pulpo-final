@@ -272,7 +272,7 @@ span {
 }
 #team h2 {
   position: absolute;
-  top: calc(var(--vh, 1vh) * 62);
+  top: calc(var(--vh, 1vh) * 52);
   left: 40px;
   z-index: 10;
 }
@@ -281,7 +281,7 @@ span {
 }
 #team li > div {
   width: 100%;
-  height: calc(var(--vh, 1vh) * 60);
+  height: calc(var(--vh, 1vh) * 50);
   max-height: 400px;
 }
 #team .axel {
