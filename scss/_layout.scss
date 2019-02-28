@@ -3,6 +3,7 @@
   color: $color-main-dark;
   text-align: center;
   height: $display-all-viewport;
+  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: 1fr;
   scroll-snap-align: start;
@@ -53,13 +54,23 @@
 
 #site-main {
   height: $display-all-viewport;
+  height: calc(var(--vh, 1vh) * 100);
+
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
+
   -webkit-scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
+
   -webkit-scroll-snap-points-y: repeat($display-all-viewport);
-  scroll-snap-points-y: repeat($display-all-viewport);
   -webkit-scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
+
+  -ms-scroll-snap-points-x: repeat($display-all-viewport);
+  -ms-scroll-snap-points-x: repeat(calc(var(--vh, 1vh) * 100));
+
+  scroll-snap-points-y: repeat($display-all-viewport);
   scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
+
   scroll-snap-destination: 0 0;
   scroll-snap-type: y mandatory;
   scroll-snap-type: mandatory;
@@ -78,6 +89,7 @@
 .snap-container {
   -webkit-scroll-snap-coordinate: 0% 0%;
   scroll-snap-align: start;
+
   height: $display-all-viewport;
   height: calc(var(--vh, 1vh) * 100);
 }
