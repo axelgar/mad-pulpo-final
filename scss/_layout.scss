@@ -1,10 +1,11 @@
-#site-header {
+#header {
   padding: 30px 0;
   color: $color-main-dark;
   text-align: center;
   height: $display-all-viewport;
   display: grid;
   grid-template-columns: 1fr;
+  scroll-snap-align: start;
 
   .logo-container {
     width: 200px;
@@ -13,6 +14,8 @@
     
     img {
       -webkit-animation: pulpo 3s cubic-bezier(0.51, 0.32, 0.31, 0.61) infinite;
+      -moz-animation: pulpo 3s cubic-bezier(0.51, 0.32, 0.31, 0.61) infinite;
+      -o-animation: pulpo 3s cubic-bezier(0.51, 0.32, 0.31, 0.61) infinite;
       animation: pulpo 3s cubic-bezier(0.51, 0.32, 0.31, 0.61) infinite;
     }
   }
@@ -48,6 +51,15 @@
   }
 }
 
+#site-main {
+  height: 100vh;
+  overflow: scroll;
+  scroll-snap-points-y: repeat($display-all-viewport);
+  scroll-snap-destination: 0 0;
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
+} 
+
 #site-footer {
   color: white;
   padding: 20px 0;
@@ -58,9 +70,9 @@
   margin: 0 40px;;
 }
 
-.section {
-  margin-bottom: 20px;
-  padding-top: 20px;
+.snap-container {
+  scroll-snap-align: start;
+  height: $display-all-viewport;
 }
 
 @media (min-width: 768px) {
