@@ -272,7 +272,7 @@ span {
 }
 #team h2 {
   position: absolute;
-  top: 410px;
+  top: calc(var(--vh, 1vh) * 62);
   left: 40px;
   z-index: 10;
 }
@@ -281,7 +281,8 @@ span {
 }
 #team li > div {
   width: 100%;
-  height: 400px;
+  height: calc(var(--vh, 1vh) * 60);
+  max-height: 400px;
 }
 #team .axel {
   background: url("images/axel.jpg") no-repeat 0 0;
