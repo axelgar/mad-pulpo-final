@@ -110,8 +110,45 @@ li {
     filter: drop-shadow(0px -1px 1px rgba(0, 0, 0, 0.2));
   }
 }
-@keyframes name-fadein {
+@keyframes name-fadein-first {
   0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes name-fadein-second {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes name-fadein-last {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
     opacity: 0.1;
   }
   100% {
@@ -126,6 +163,7 @@ li {
   height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: 1fr;
+  -webkit-scroll-snap-coordinate: 0% 0%;
   scroll-snap-align: start;
 }
 #header .logo-container {
@@ -171,15 +209,15 @@ li {
   height: calc(var(--vh, 1vh) * 100);
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
-  -webkit-scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
   -webkit-scroll-snap-points-y: repeat(100vh);
   -webkit-scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
-  -ms-scroll-snap-points-x: repeat(100vh);
-  -ms-scroll-snap-points-x: repeat(calc(var(--vh, 1vh) * 100));
+  -ms-scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   scroll-snap-destination: 0 0;
+  -webkit-scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
   scroll-snap-type: mandatory;
 }
@@ -312,18 +350,28 @@ span {
 }
 #team article {
   margin-bottom: 20px;
+  opacity: 0.1;
 }
 #team article:last-child {
   margin: 0;
 }
+#team article:nth-child(1) {
+  -webkit-animation: name-fadein-last 6s infinite ease 0.5s;
+  -moz-animation: name-fadein-last 6s infinite ease 0.5s;
+  -o-animation: name-fadein-last 6s infinite ease 0.5s;
+  animation: name-fadein-last 6s infinite ease 0.5s;
+}
 #team article:nth-child(2) {
-  animation: name-fadein 6s infinite ease;
+  -webkit-animation: name-fadein-first 6s infinite ease 0.5se;
+  -moz-animation: name-fadein-first 6s infinite ease 0.5se;
+  -o-animation: name-fadein-first 6s infinite ease 0.5se;
+  animation: name-fadein-first 6s infinite ease 0.5s;
 }
 #team article:nth-child(3) {
-  animation: name-fadein 4s infinite ease 2s;
-}
-#team article:nth-child(1) {
-  animation: name-fadein 2s infinite ease 4s;
+  -webkit-animation: name-fadein-second 6s infinite ease 0.5se;
+  -moz-animation: name-fadein-second 6s infinite ease 0.5se;
+  -o-animation: name-fadein-second 6s infinite ease 0.5se;
+  animation: name-fadein-second 6s infinite ease 0.5s;
 }
 
 #projects {

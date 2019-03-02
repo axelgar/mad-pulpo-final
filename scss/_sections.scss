@@ -67,21 +67,31 @@
 
   article {
     margin-bottom: 20px;
+    opacity: 0.1;
 
     &:last-child {
       margin: 0;
     }
 
+    &:nth-child(1) {
+      -webkit-animation: name-fadein-last 6s infinite ease 0.5s;
+      -moz-animation: name-fadein-last 6s infinite ease 0.5s;
+      -o-animation: name-fadein-last 6s infinite ease 0.5s;
+      animation: name-fadein-last 6s infinite ease 0.5s;
+    }
+
     &:nth-child(2) {
-      animation: name-fadein 6s infinite ease;
+      -webkit-animation: name-fadein-first 6s infinite ease 0.5se;
+      -moz-animation: name-fadein-first 6s infinite ease 0.5se;
+      -o-animation: name-fadein-first 6s infinite ease 0.5se;
+      animation: name-fadein-first 6s infinite ease 0.5s;
     }
 
     &:nth-child(3) {
-      animation: name-fadein 4s infinite ease 2s;
-    }
-
-    &:nth-child(1) {
-      animation: name-fadein 2s infinite ease 4s;
+      -webkit-animation: name-fadein-second 6s infinite ease 0.5se;
+      -moz-animation: name-fadein-second 6s infinite ease 0.5se;
+      -o-animation: name-fadein-second 6s infinite ease 0.5se;
+      animation: name-fadein-second 6s infinite ease 0.5s;
     }
   }
 }
