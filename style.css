@@ -375,10 +375,10 @@ li {
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   scroll-snap-destination: 0 0;
-  -webkit-scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: y mandatory;
-  scroll-snap-type: mandatory;
+  -webkit-scroll-snap-type: proximity;
+  -ms-scroll-snap-type: proximity;
+  scroll-snap-type: y proximity;
+  scroll-snap-type: proximity;
 }
 
 #site-footer {
@@ -515,22 +515,22 @@ span {
   margin: 0;
 }
 #team article:nth-child(1) {
-  -webkit-animation: name-fadein-last 6s infinite ease 0.9s;
-  -moz-animation: name-fadein-last 6s infinite ease 0.9s;
-  -o-animation: name-fadein-last 6s infinite ease 0.9s;
-  animation: name-fadein-last 6s infinite ease 0.9s;
+  -webkit-animation: name-fadein-last 9s infinite ease 1.4s;
+  -moz-animation: name-fadein-last 9s infinite ease 1.4s;
+  -o-animation: name-fadein-last 9s infinite ease 1.4s;
+  animation: name-fadein-last 9s infinite ease 1.4s;
 }
 #team article:nth-child(2) {
-  -webkit-animation: name-fadein-first 6s infinite ease;
-  -moz-animation: name-fadein-first 6s infinite ease;
-  -o-animation: name-fadein-first 6s infinite ease;
-  animation: name-fadein-first 6s infinite ease;
+  -webkit-animation: name-fadein-first 9s infinite ease;
+  -moz-animation: name-fadein-first 9s infinite ease;
+  -o-animation: name-fadein-first 9s infinite ease;
+  animation: name-fadein-first 9s infinite ease;
 }
 #team article:nth-child(3) {
-  -webkit-animation: name-fadein-second 6s infinite ease 0.5s;
-  -moz-animation: name-fadein-second 6s infinite ease 0.5s;
-  -o-animation: name-fadein-second 6s infinite ease 0.5s;
-  animation: name-fadein-second 6s infinite ease 0.5s;
+  -webkit-animation: name-fadein-second 9s infinite ease 0.7s;
+  -moz-animation: name-fadein-second 9s infinite ease 0.7s;
+  -o-animation: name-fadein-second 9s infinite ease 0.7s;
+  animation: name-fadein-second 9s infinite ease 0.7s;
 }
 
 #projects {

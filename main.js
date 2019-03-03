@@ -18,7 +18,7 @@ const main = () => {
   const setCarousel = (element) => {
     new Glide(element, {
       autoplay:true,
-      animationDuration: 2000,
+      animationDuration: 3000,
       type: 'carousel',
       gap: 0
     }).mount()

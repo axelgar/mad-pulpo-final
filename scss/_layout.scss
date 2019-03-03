@@ -71,10 +71,10 @@
 
   scroll-snap-destination: 0 0;
   
-  -webkit-scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: y mandatory;
-  scroll-snap-type: mandatory;
+  -webkit-scroll-snap-type: proximity;
+  -ms-scroll-snap-type: proximity;
+  scroll-snap-type: y proximity;
+  scroll-snap-type: proximity;
 } 
 
 #site-footer {
