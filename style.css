@@ -30,6 +30,210 @@ li {
   list-style: none;
 }
 
+@-webkit-keyframes name-fadein-first {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframes name-fadein-second {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframes name-fadein-last {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes name-fadein-first {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-moz-keyframes name-fadein-second {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-moz-keyframes name-fadein-last {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes name-fadein-first {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-o-keyframes name-fadein-second {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@-o-keyframes name-fadein-first {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes name-fadein-first {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes name-fadein-second {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes name-fadein-last {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
 @-webkit-keyframes pulpo {
   0% {
     -webkit-transform: translate(0px);
@@ -108,51 +312,6 @@ li {
     transform: translate(0px);
     -webkit-filter: drop-shadow(0px -1px 1px rgba(0, 0, 0, 0.2));
     filter: drop-shadow(0px -1px 1px rgba(0, 0, 0, 0.2));
-  }
-}
-@keyframes name-fadein-first {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  75% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
-@keyframes name-fadein-second {
-  0% {
-    opacity: 0.1;
-  }
-  25% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
-@keyframes name-fadein-last {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 1;
   }
 }
 #header {
@@ -356,21 +515,21 @@ span {
   margin: 0;
 }
 #team article:nth-child(1) {
-  -webkit-animation: name-fadein-last 6s infinite ease 0.5s;
-  -moz-animation: name-fadein-last 6s infinite ease 0.5s;
-  -o-animation: name-fadein-last 6s infinite ease 0.5s;
-  animation: name-fadein-last 6s infinite ease 0.5s;
+  -webkit-animation: name-fadein-last 6s infinite ease 0.9s;
+  -moz-animation: name-fadein-last 6s infinite ease 0.9s;
+  -o-animation: name-fadein-last 6s infinite ease 0.9s;
+  animation: name-fadein-last 6s infinite ease 0.9s;
 }
 #team article:nth-child(2) {
-  -webkit-animation: name-fadein-first 6s infinite ease 0.5se;
-  -moz-animation: name-fadein-first 6s infinite ease 0.5se;
-  -o-animation: name-fadein-first 6s infinite ease 0.5se;
-  animation: name-fadein-first 6s infinite ease 0.5s;
+  -webkit-animation: name-fadein-first 6s infinite ease;
+  -moz-animation: name-fadein-first 6s infinite ease;
+  -o-animation: name-fadein-first 6s infinite ease;
+  animation: name-fadein-first 6s infinite ease;
 }
 #team article:nth-child(3) {
-  -webkit-animation: name-fadein-second 6s infinite ease 0.5se;
-  -moz-animation: name-fadein-second 6s infinite ease 0.5se;
-  -o-animation: name-fadein-second 6s infinite ease 0.5se;
+  -webkit-animation: name-fadein-second 6s infinite ease 0.5s;
+  -moz-animation: name-fadein-second 6s infinite ease 0.5s;
+  -o-animation: name-fadein-second 6s infinite ease 0.5s;
   animation: name-fadein-second 6s infinite ease 0.5s;
 }
 

@@ -74,23 +74,23 @@
     }
 
     &:nth-child(1) {
-      -webkit-animation: name-fadein-last 6s infinite ease 0.5s;
-      -moz-animation: name-fadein-last 6s infinite ease 0.5s;
-      -o-animation: name-fadein-last 6s infinite ease 0.5s;
-      animation: name-fadein-last 6s infinite ease 0.5s;
+      -webkit-animation: name-fadein-last 6s infinite ease 0.9s;
+      -moz-animation: name-fadein-last 6s infinite ease 0.9s;
+      -o-animation: name-fadein-last 6s infinite ease 0.9s;
+      animation: name-fadein-last 6s infinite ease 0.9s;
     }
 
     &:nth-child(2) {
-      -webkit-animation: name-fadein-first 6s infinite ease 0.5se;
-      -moz-animation: name-fadein-first 6s infinite ease 0.5se;
-      -o-animation: name-fadein-first 6s infinite ease 0.5se;
-      animation: name-fadein-first 6s infinite ease 0.5s;
+      -webkit-animation: name-fadein-first 6s infinite ease;
+      -moz-animation: name-fadein-first 6s infinite ease;
+      -o-animation: name-fadein-first 6s infinite ease;
+      animation: name-fadein-first 6s infinite ease;
     }
 
     &:nth-child(3) {
-      -webkit-animation: name-fadein-second 6s infinite ease 0.5se;
-      -moz-animation: name-fadein-second 6s infinite ease 0.5se;
-      -o-animation: name-fadein-second 6s infinite ease 0.5se;
+      -webkit-animation: name-fadein-second 6s infinite ease 0.5s;
+      -moz-animation: name-fadein-second 6s infinite ease 0.5s;
+      -o-animation: name-fadein-second 6s infinite ease 0.5s;
       animation: name-fadein-second 6s infinite ease 0.5s;
     }
   }
