@@ -314,6 +314,50 @@ li {
     filter: drop-shadow(0px -1px 1px rgba(0, 0, 0, 0.2));
   }
 }
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 #header {
   color: #262626;
   text-align: center;
@@ -604,6 +648,7 @@ input, textarea {
   align-self: start;
   font-weight: 700;
   margin-bottom: 60px;
+  opacity: 0;
 }
 .section-title::before {
   content: "";
@@ -616,6 +661,11 @@ input, textarea {
   border-radius: 2px;
   background-color: #E58D16;
   position: absolute;
+}
+
+.slide-in-left {
+  opacity: 100;
+  animation: slideInLeft ease 2s;
 }
 
 .project-title {
