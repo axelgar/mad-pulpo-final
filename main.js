@@ -11,15 +11,15 @@ const main = () => {
   snapContainer.addEventListener('scroll', () => {
     titlesElements.forEach((title, index) => {
       const position = index + 1; 
-      if(title.top > window.innerHeight*position && title.top < window.innerHeight*(position + 1) && snapContainer.scrollTop === window.innerHeight*position) {
+      if(title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*(position + 1) && snapContainer.scrollTop === snapContainer.clientHeight*position) {
         listSectionTitles[index].classList.add('slide-in-left');
       }
 
-      if (title.top > window.innerHeight*position && title.top < window.innerHeight*(position + 1) && snapContainer.scrollTop >= window.innerHeight*(position+1)) {
+      if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*(position + 1) && snapContainer.scrollTop >= snapContainer.clientHeight*(position+1)) {
         listSectionTitles[index].classList.remove('slide-in-left');
       }
 
-      if (title.top > window.innerHeight*position && title.top < window.innerHeight*(position + 1) && snapContainer.scrollTop < window.innerHeight*(position-0.5)) {
+      if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*(position + 1) && snapContainer.scrollTop < snapContainer.clientHeight*(position-0.5)) {
         listSectionTitles[index].classList.remove('slide-in-left');
       }
     })
