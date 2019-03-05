@@ -462,7 +462,7 @@ body {
 
 h1 {
   text-transform: uppercase;
-  padding-top: 75px;
+  padding-top: 25%;
   font-size: 40px;
   margin-bottom: 30px;
 }
@@ -471,6 +471,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
+  opacity: 0;
 }
 
 h3 {
@@ -582,8 +583,8 @@ input, textarea {
 
 #projects {
   padding-top: 110px;
-  height: auto;
   min-height: 100vh;
+  height: 200vh;
 }
 #projects article {
   padding-bottom: 30px;
@@ -648,7 +649,6 @@ input, textarea {
   align-self: start;
   font-weight: 700;
   margin-bottom: 60px;
-  opacity: 0;
 }
 .section-title::before {
   content: "";

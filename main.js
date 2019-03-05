@@ -2,40 +2,51 @@
 
 const main = () => {
   const snapContainer = document.querySelector('#site-main');
-  const listSectionTitles = document.querySelectorAll('.section-title');
-  const titlesElements = []
+  const listSectionTitles = document.querySelectorAll('h2.section-title');
+  const listSection = document.querySelector('#projects');
+  const listSectionElement = listSection.getBoundingClientRect();
+  const titlesElements = [];
 
+  console.log(listSectionElement)
   listSectionTitles.forEach((element) => {
     titlesElements.push(element.getBoundingClientRect())
   })
 
+
   snapContainer.addEventListener('scroll', () => {
     titlesElements.forEach((title, index) => {
-      const VIEW_CURRENT_POSITION = index + 1;
+      let VIEW_CURRENT_POSITION = index + 1;
+      if (index === 4) {
+        VIEW_CURRENT_POSITION = index + 2;
+      }
       const VIEW_NEXT_POSITION =  VIEW_CURRENT_POSITION + 1;
       const VIEW_PREVIOUS_POSITION =  VIEW_CURRENT_POSITION - 0.5;
+      const heigth = snapContainer.clientHeight;
+      const topViewPosition = heigth * VIEW_CURRENT_POSITION ;
+      const bottomViewPosition = heigth * VIEW_NEXT_POSITION;
+      const previoysPosition = heigth * VIEW_PREVIOUS_POSITION;
 
-      if (checkTitleInView(title, VIEW_CURRENT_POSITION, VIEW_NEXT_POSITION)) {
+      if (checkTitleInView(title, topViewPosition, bottomViewPosition)) {
         addClassAnimation(index);
       }
-      if (chechkTitleOutOfView(title, VIEW_CURRENT_POSITION, VIEW_NEXT_POSITION, VIEW_PREVIOUS_POSITION)) {
+      if (chechkTitleOutOfView(title, topViewPosition, bottomViewPosition, previoysPosition)) {
         removeClassAnimation(index);
       }
     })
   })
 
-  function checkTitleInView(title, position, nextPosition) {
-    if(title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*nextPosition) {
+  function checkTitleInView(title, topPosition, bottomPosition) {
+    if(title.top > topPosition && title.top < bottomPosition) {
       return true;
     }
   }
 
-  function chechkTitleOutOfView(title,position, nextPosition, previousPosition) {
-    if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*nextPosition && snapContainer.scrollTop >= snapContainer.clientHeight*nextPosition) {
+  function chechkTitleOutOfView(title, topPosition, bottomPosition, previousPosition) {
+    if (title.top > topPosition && title.top < bottomPosition && snapContainer.scrollTop >= bottomPosition) {
       return true;
     }
 
-    if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*nextPosition && snapContainer.scrollTop < snapContainer.clientHeight*previousPosition) {
+    if (title.top > topPosition && title.top < bottomPosition && snapContainer.scrollTop < previousPosition) {
       return true;
     }
   }

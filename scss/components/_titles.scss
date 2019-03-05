@@ -1,10 +1,12 @@
+
+
 .section-title{
   position: relative;
   text-align: left;
   align-self: start;
   font-weight: 700;
   margin-bottom: 60px;
-  opacity: 0;
+
 
   &::before {
     content: '';
