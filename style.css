@@ -665,7 +665,7 @@ input, textarea {
 
 .slide-in-left {
   opacity: 100;
-  animation: slideInLeft ease 2s;
+  animation: slideInLeft ease 1s;
 }
 
 .project-title {

@@ -8,22 +8,45 @@ const main = () => {
   listSectionTitles.forEach((element) => {
     titlesElements.push(element.getBoundingClientRect())
   })
+
   snapContainer.addEventListener('scroll', () => {
     titlesElements.forEach((title, index) => {
-      const position = index + 1; 
-      if(title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*(position + 1) && snapContainer.scrollTop === snapContainer.clientHeight*position) {
-        listSectionTitles[index].classList.add('slide-in-left');
-      }
+      const VIEW_CURRENT_POSITION = index + 1;
+      const VIEW_NEXT_POSITION =  VIEW_CURRENT_POSITION + 1;
+      const VIEW_PREVIOUS_POSITION =  VIEW_CURRENT_POSITION - 0.5;
 
-      if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*(position + 1) && snapContainer.scrollTop >= snapContainer.clientHeight*(position+1)) {
-        listSectionTitles[index].classList.remove('slide-in-left');
+      if (checkTitleInView(title, VIEW_CURRENT_POSITION, VIEW_NEXT_POSITION)) {
+        addClassAnimation(index);
       }
-
-      if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*(position + 1) && snapContainer.scrollTop < snapContainer.clientHeight*(position-0.5)) {
-        listSectionTitles[index].classList.remove('slide-in-left');
+      if (chechkTitleOutOfView(title, VIEW_CURRENT_POSITION, VIEW_NEXT_POSITION, VIEW_PREVIOUS_POSITION)) {
+        removeClassAnimation(index);
       }
     })
   })
+
+  function checkTitleInView(title, position, nextPosition) {
+    if(title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*nextPosition) {
+      return true;
+    }
+  }
+
+  function chechkTitleOutOfView(title,position, nextPosition, previousPosition) {
+    if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*nextPosition && snapContainer.scrollTop >= snapContainer.clientHeight*nextPosition) {
+      return true;
+    }
+
+    if (title.top > snapContainer.clientHeight*position && title.top < snapContainer.clientHeight*nextPosition && snapContainer.scrollTop < snapContainer.clientHeight*previousPosition) {
+      return true;
+    }
+  }
+
+  function addClassAnimation(index) {
+    listSectionTitles[index].classList.add('slide-in-left');
+  }
+
+  function removeClassAnimation(index) {
+    listSectionTitles[index].classList.remove('slide-in-left');
+  }
 
   window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
