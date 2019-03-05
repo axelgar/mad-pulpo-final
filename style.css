@@ -394,7 +394,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px auto;
+  margin: auto;
   transform: scale(1);
   transition: transform 0.7s ease;
   cursor: pointer;

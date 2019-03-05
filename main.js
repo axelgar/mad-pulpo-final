@@ -3,15 +3,11 @@
 const main = () => {
   const snapContainer = document.querySelector('#site-main');
   const listSectionTitles = document.querySelectorAll('h2.section-title');
-  const listSection = document.querySelector('#projects');
-  const listSectionElement = listSection.getBoundingClientRect();
   const titlesElements = [];
 
-  console.log(listSectionElement)
   listSectionTitles.forEach((element) => {
     titlesElements.push(element.getBoundingClientRect())
   })
-
 
   snapContainer.addEventListener('scroll', () => {
     titlesElements.forEach((title, index) => {
@@ -29,6 +25,7 @@ const main = () => {
       if (checkTitleInView(title, topViewPosition, bottomViewPosition)) {
         addClassAnimation(index);
       }
+
       if (chechkTitleOutOfView(title, topViewPosition, bottomViewPosition, previoysPosition)) {
         removeClassAnimation(index);
       }
