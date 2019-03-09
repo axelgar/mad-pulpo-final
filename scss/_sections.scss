@@ -99,10 +99,83 @@
 #projects {
   padding-top: 110px;
   min-height: $display-all-viewport;
-  height: 200vh;
+  height: 300vh;
+
+  .container-main-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .main-image-ironcampus {
+    background-image: url('./images/ironcampus-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-image-fifa {
+    background-image: url('./images/fifa-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapper {
+    position: relative;
+    top: -150px;
+  }
+
+  .container-image {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100% - 50px);
+    margin: 0 auto 70px;
+  }
+
+  .device {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 85%;
+      filter: drop-shadow(0px 9px 9px rgba(0, 0, 0, 0.2));
+    }
+  }
 
   article {
     padding-bottom: 30px;
+    position: relative;
+    height: 45%;
+  }
+
+  .project-title {
+    margin-bottom: 30px;
+  }
+
+  .project-description {
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  .project-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      height: 2px;
+      width: 10px;
+      position: absolute;
+      top: 50%;
+      left: calc( 100% + 12px );
+      transform: translateY(-50%);
+      background: $color-main-orange;
+    }
   }
 }
 

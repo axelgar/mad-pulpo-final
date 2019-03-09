@@ -13,7 +13,7 @@ const main = () => {
     titlesElements.forEach((title, index) => {
       let VIEW_CURRENT_POSITION = index + 1;
       if (index === 4) {
-        VIEW_CURRENT_POSITION = index + 2;
+        VIEW_CURRENT_POSITION = index + 3;
       }
       const VIEW_NEXT_POSITION =  VIEW_CURRENT_POSITION + 1;
       const VIEW_PREVIOUS_POSITION =  VIEW_CURRENT_POSITION - 0.5;
