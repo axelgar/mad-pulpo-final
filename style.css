@@ -367,6 +367,7 @@ li {
   grid-template-columns: 1fr;
   -webkit-scroll-snap-coordinate: 0% 0%;
   scroll-snap-align: start;
+  justify-items: center;
 }
 #header .logo-container {
   width: 200px;
@@ -394,7 +395,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   transform: scale(1);
   transition: transform 0.7s ease;
   cursor: pointer;
