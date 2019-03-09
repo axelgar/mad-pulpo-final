@@ -381,7 +381,7 @@ li {
 }
 #header p {
   max-width: 300px;
-  margin: 20px auto 0;
+  margin: auto;
   line-height: 30px;
   opacity: 0.8;
 }
@@ -462,9 +462,9 @@ body {
 
 h1 {
   text-transform: uppercase;
-  padding-top: 25%;
+  padding-top: 5%;
   font-size: 40px;
-  margin-bottom: 30px;
+  margin: auto;
 }
 
 h2 {
