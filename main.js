@@ -17,7 +17,7 @@ const main = () => {
         VIEW_CURRENT_POSITION = index + projectsSection.clientHeight / window.innerHeight - 0.5;
       }
       const VIEW_NEXT_POSITION =  VIEW_CURRENT_POSITION + 1;
-      const VIEW_PREVIOUS_POSITION =  VIEW_CURRENT_POSITION - 0.5;
+      const VIEW_PREVIOUS_POSITION =  VIEW_CURRENT_POSITION - 0.9;
       const heigth = snapContainer.clientHeight;
       const topViewPosition = heigth * VIEW_CURRENT_POSITION ;
       const bottomViewPosition = heigth * VIEW_NEXT_POSITION;
@@ -56,11 +56,6 @@ const main = () => {
   function removeClassAnimation(index) {
     listSectionTitles[index].classList.remove('slide-in-left');
   }
-
-  window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
 
   const setTypedBehaviour = (domElement) => {
     new Typed(domElement, {

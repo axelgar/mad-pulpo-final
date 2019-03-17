@@ -362,7 +362,6 @@ li {
   color: #262626;
   text-align: center;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -406,15 +405,11 @@ li {
 
 #site-main {
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
   -webkit-scroll-snap-points-y: repeat(100vh);
-  -webkit-scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   -ms-scroll-snap-points-y: repeat(100vh);
-  -ms-scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   scroll-snap-points-y: repeat(100vh);
-  scroll-snap-points-y: repeat(calc(var(--vh, 1vh) * 100));
   scroll-snap-destination: 0 0;
   -webkit-scroll-snap-type: proximity;
   -ms-scroll-snap-type: proximity;
@@ -535,8 +530,7 @@ input, textarea {
 }
 #team h2 {
   position: absolute;
-  top: 52vh;
-  top: calc(var(--vh, 1vh) * 52);
+  top: 51vh;
   left: 40px;
   z-index: 10;
 }
