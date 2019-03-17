@@ -14,8 +14,7 @@ const main = () => {
     titlesElements.forEach((title, index) => {
       let VIEW_CURRENT_POSITION = index + 1;
       if (index === 4) {
-        console.log(projectsSection.clientHeight / window.innerHeight)
-        VIEW_CURRENT_POSITION = index + projectsSection.clientHeight / window.innerHeight;
+        VIEW_CURRENT_POSITION = index + projectsSection.clientHeight / window.innerHeight - 0.5;
       }
       const VIEW_NEXT_POSITION =  VIEW_CURRENT_POSITION + 1;
       const VIEW_PREVIOUS_POSITION =  VIEW_CURRENT_POSITION - 0.5;

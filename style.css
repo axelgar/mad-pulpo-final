@@ -365,8 +365,6 @@ li {
   height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: 1fr;
-  -webkit-scroll-snap-coordinate: 0% 0%;
-  scroll-snap-align: start;
   justify-items: center;
 }
 #header .logo-container {
@@ -432,13 +430,6 @@ li {
 
 .container {
   margin: 0 40px;
-}
-
-.snap-container {
-  -webkit-scroll-snap-coordinate: 0% 0%;
-  scroll-snap-align: start;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
 }
 
 @media (min-width: 768px) {
@@ -558,17 +549,17 @@ input, textarea {
   max-height: 400px;
 }
 #team .axel {
-  background: url("images/axel.webp") no-repeat 0 0;
+  background: url("images/axel.jpg") no-repeat 0 0;
   background-size: cover;
   background-position-x: center;
 }
 #team .franci {
-  background: url("images/franci.webp") no-repeat 0 0;
+  background: url("images/franci.jpg") no-repeat 0 0;
   background-size: cover;
   background-position-x: center;
 }
 #team .jonathan {
-  background: url("images/jonathan.webp") no-repeat 0 0;
+  background: url("images/jonathan.jpg") no-repeat 0 0;
   background-size: cover;
   background-position-x: center;
 }

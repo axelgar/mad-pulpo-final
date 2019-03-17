@@ -5,8 +5,6 @@
   height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: 1fr;
-  -webkit-scroll-snap-coordinate: 0% 0%;
-  scroll-snap-align: start;
   justify-items: center;
 
   .logo-container {
@@ -84,14 +82,6 @@
 
 .container {
   margin: 0 40px;;
-}
-
-.snap-container {
-  -webkit-scroll-snap-coordinate: 0% 0%;
-  scroll-snap-align: start;
-
-  height: $display-all-viewport;
-  height: calc(var(--vh, 1vh) * 100);
 }
 
 @media (min-width: 768px) {
