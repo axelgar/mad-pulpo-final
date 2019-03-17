@@ -4,6 +4,7 @@ const main = () => {
   const snapContainer = document.querySelector('#site-main');
   const listSectionTitles = document.querySelectorAll('h2.section-title');
   const titlesElements = [];
+  const projectsSection = document.querySelector('#projects');
 
   listSectionTitles.forEach((element) => {
     titlesElements.push(element.getBoundingClientRect())
@@ -13,7 +14,8 @@ const main = () => {
     titlesElements.forEach((title, index) => {
       let VIEW_CURRENT_POSITION = index + 1;
       if (index === 4) {
-        VIEW_CURRENT_POSITION = index + 3;
+        console.log(projectsSection.clientHeight / window.innerHeight)
+        VIEW_CURRENT_POSITION = index + projectsSection.clientHeight / window.innerHeight;
       }
       const VIEW_NEXT_POSITION =  VIEW_CURRENT_POSITION + 1;
       const VIEW_PREVIOUS_POSITION =  VIEW_CURRENT_POSITION - 0.5;
