@@ -588,7 +588,7 @@ input, textarea {
     display: flex;
   }
   #team .glide {
-    width: 45%;
+    width: 50%;
     height: 100vh;
   }
   #team .glide .glide__track {
@@ -598,7 +598,7 @@ input, textarea {
     height: 100%;
   }
   #team h2 {
-    left: 42%;
+    left: 45%;
   }
   #team li > div {
     width: 100%;
