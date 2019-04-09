@@ -182,6 +182,7 @@
     img {
       width: 85%;
       top: -70px;
+      max-width: 70%;
     }
   } 
 
@@ -192,7 +193,7 @@
   }
 
   .project-title {
-    margin: 150px 30px 0 0;
+    margin: 35% 30px 0 0;
   }
 
   .project-description {
@@ -216,6 +217,55 @@
       left: calc( 100% + 12px );
       transform: translateY(-50%);
       background: $color-main-orange;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #projects {
+
+    .project-title {
+      margin: 0 0 20px 0; 
+    }
+
+    article {
+      display: flex;
+      height: 100vh;
+      justify-content: space-between;
+    }
+
+    .container-main-image {
+      width: 50%;
+      height: 100%;
+      order: 1;
+    }
+
+    .wrapper {
+      margin: auto 20px;
+      width: 30%;
+    }
+
+    .container-image {
+      position: inherit;
+    }
+
+    .device img {
+      max-width: none;
+      width: 15%;
+      right: 40%;
+      margin-top: auto;
+      margin-bottom: auto;
+      top: 0;
+      bottom: 0;
+    }
+
+    .container-image .device:first-child img{
+      right: 20%;
+    }
+
+    .container-image .desktop img:first-child{
+      width: 50%;
+      right: 100px;
     }
   }
 }

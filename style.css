@@ -651,6 +651,7 @@ input, textarea {
 #projects .desktop img {
   width: 85%;
   top: -70px;
+  max-width: 70%;
 }
 #projects article {
   padding-bottom: 30px;
@@ -658,7 +659,7 @@ input, textarea {
   height: 45%;
 }
 #projects .project-title {
-  margin: 150px 30px 0 0;
+  margin: 35% 30px 0 0;
 }
 #projects .project-description p {
   margin-bottom: 15px;
@@ -680,6 +681,44 @@ input, textarea {
   background: #E58D16;
 }
 
+@media (min-width: 768px) {
+  #projects .project-title {
+    margin: 0 0 20px 0;
+  }
+  #projects article {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  #projects .container-main-image {
+    width: 50%;
+    height: 100%;
+    order: 1;
+  }
+  #projects .wrapper {
+    margin: auto 20px;
+    width: 30%;
+  }
+  #projects .container-image {
+    position: inherit;
+  }
+  #projects .device img {
+    max-width: none;
+    width: 15%;
+    right: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+  }
+  #projects .container-image .device:first-child img {
+    right: 20%;
+  }
+  #projects .container-image .desktop img:first-child {
+    width: 50%;
+    right: 100px;
+  }
+}
 #contact {
   height: 100vh;
   padding-top: 20%;
