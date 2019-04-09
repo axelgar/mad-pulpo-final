@@ -583,6 +583,32 @@ input, textarea {
   animation: name-fadein-second 9s infinite ease 0.7s;
 }
 
+@media (min-width: 768px) {
+  #team {
+    display: flex;
+  }
+  #team .glide {
+    width: 45%;
+    height: 100vh;
+  }
+  #team .glide .glide__track {
+    height: 100%;
+  }
+  #team .glide .glide__slides {
+    height: 100%;
+  }
+  #team h2 {
+    left: 42%;
+  }
+  #team li > div {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    max-height: none;
+  }
+  #team .text-carousel {
+    margin: auto;
+  }
+}
 #projects {
   padding-top: 110px;
 }
@@ -619,6 +645,7 @@ input, textarea {
   position: absolute;
   top: -150px;
   width: 35%;
+  max-width: 150px;
   filter: drop-shadow(0px 9px 9px rgba(0, 0, 0, 0.2));
 }
 #projects .desktop img {
