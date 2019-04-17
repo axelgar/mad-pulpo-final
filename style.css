@@ -407,14 +407,6 @@ li {
   height: 100vh;
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
-  -webkit-scroll-snap-points-y: repeat(100vh);
-  -ms-scroll-snap-points-y: repeat(100vh);
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-destination: 0 0;
-  -webkit-scroll-snap-type: proximity;
-  -ms-scroll-snap-type: proximity;
-  scroll-snap-type: y proximity;
-  scroll-snap-type: proximity;
 }
 
 #site-footer {
