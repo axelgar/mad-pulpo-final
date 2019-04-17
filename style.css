@@ -758,6 +758,11 @@ input, textarea {
   font-family: "Josefin Sans", sans-serif;
 }
 
+@media (min-width: 768px) {
+  #contact {
+    width: 60%;
+  }
+}
 .button {
   display: inline-block;
   background-color: #E58D16;

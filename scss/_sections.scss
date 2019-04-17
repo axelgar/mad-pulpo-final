@@ -313,3 +313,9 @@
     font-family: $main-font-family;
   }
 }
+
+@media (min-width: 768px) {
+  #contact {
+    width: 60%;
+  }
+}
