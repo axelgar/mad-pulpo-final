@@ -416,7 +416,11 @@ li {
 }
 
 .container {
-  margin: 0 40px;
+  margin: 0 10px;
+}
+
+.split {
+
 }
 
 @media (min-width: 768px) {
@@ -427,7 +431,7 @@ li {
 }
 @media (min-width: 1024px) {
   .container {
-    max-width: 1000px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 }
@@ -494,26 +498,49 @@ input, textarea {
   font-family: "Josefin Sans", sans-serif;
 }
 
+article {
+  margin-bottom: 10px;
+  flex: 1;
+}
+
 .about {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0 20px;
 }
 
-.team-brief p {
+#about {
+  background-color: rgb(243, 243, 243);
+}
+
+.team-brief h3 {
   font-size: 30px;
   line-height: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
 .team-brief .types-container {
   margin-bottom: 20px;
 }
 
-.team-goals p {
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 20px;
+.contact-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-box .contact-button {
+  display: inline-block;
+  background-color: blue;
+  color: #F8F8F8;
+  align-self: center;
+  margin: 0 auto;
+  padding: 45px;
+  border-radius: 100px;
 }
 
 #team {
@@ -599,6 +626,10 @@ input, textarea {
   }
   #team .text-carousel {
     margin: auto;
+  }
+
+  .split {
+    display: flex;
   }
 }
 #projects {
@@ -759,16 +790,20 @@ input, textarea {
   display: inline-block;
   background-color: #E58D16;
   color: #F8F8F8;
-  border-radius: 30px;
-  padding: 20px 35px;
-  transition: all 0.7s ease;
+  border-radius: 15px;
+  padding: 15px 25px;
+  transition: all 0.3s ease;
   border: 2px solid #F8F8F8;
   font-size: 16px;
+  align-self: baseline;
+  margin: 20px 0;
 }
+
 .button:hover {
   background-color: transparent;
   color: #E58D16;
   border: 2px solid #E58D16;
+  border-radius: 0px;
 }
 
 .section-title {
@@ -776,7 +811,7 @@ input, textarea {
   text-align: left;
   align-self: start;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .section-title::before {
   content: "";

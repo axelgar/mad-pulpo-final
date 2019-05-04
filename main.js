@@ -27,7 +27,7 @@ const main = () => {
         addClassAnimation(index);
       }
 
-      if (chechkTitleOutOfView(title, topViewPosition, bottomViewPosition, previoysPosition)) {
+      if (checkTitleOutOfView(title, topViewPosition, bottomViewPosition, previoysPosition)) {
         removeClassAnimation(index);
       }
     })
@@ -39,7 +39,7 @@ const main = () => {
     }
   }
 
-  function chechkTitleOutOfView(title, topPosition, bottomPosition, previousPosition) {
+  function checkTitleOutOfView(title, topPosition, bottomPosition, previousPosition) {
     if (title.top > topPosition && title.top < bottomPosition && snapContainer.scrollTop >= bottomPosition) {
       return true;
     }
@@ -74,7 +74,7 @@ const main = () => {
     }).mount()
   }
 
-  setTypedBehaviour('#typed')
+  // setTypedBehaviour('#typed')
   setCarousel('.glide')
 
   // const scrollDown = () => {
