@@ -409,7 +409,11 @@ li {
 }
 
 .container {
-  margin: 0 40px;
+  margin: 0 10px;
+}
+
+.split {
+
 }
 
 @media (min-width: 768px) {
@@ -420,7 +424,7 @@ li {
 }
 @media (min-width: 1024px) {
   .container {
-    max-width: 1000px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 }
@@ -488,6 +492,11 @@ input, textarea {
   font-family: "Josefin Sans", sans-serif;
 }
 
+article {
+  margin-bottom: 10px;
+  flex: 1;
+}
+
 .about {
   display: flex;
   align-items: center;
@@ -504,10 +513,21 @@ input, textarea {
   margin-bottom: 20px;
 }
 
-.team-goals p {
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 20px;
+.contact-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-box .contact-button {
+  display: inline-block;
+  background-color: blue;
+  color: #F8F8F8;
+  align-self: center;
+  margin: 0 auto;
+  padding: 45px;
+  border-radius: 100px;
 }
 
 #team {
@@ -584,6 +604,10 @@ input, textarea {
   }
   #team .text-carousel {
     margin: auto;
+  }
+
+  .split {
+    display: flex;
   }
 }
 #projects {
