@@ -361,15 +361,19 @@ li {
 #header {
   color: #262626;
   text-align: center;
-  height: 100vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr auto 1fr;
   justify-items: center;
+  background-image: url("./images/background.svg");
+  background-size: cover;
 }
 #header .logo-container {
   width: 200px;
   justify-self: center;
   align-self: center;
+  margin-top: 100px;
 }
 #header .logo-container img {
   -webkit-animation: pulpo 3s cubic-bezier(0.51, 0.32, 0.31, 0.61) infinite;
@@ -383,24 +387,13 @@ li {
   line-height: 30px;
   opacity: 0.8;
 }
-#header .arrow-section {
-  opacity: 0.8;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #262626;
+#header .main-title-contianer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1);
-  transition: transform 0.7s ease;
-  cursor: pointer;
+  margin: auto;
 }
-#header .arrow-section:hover {
-  transform: scale(1.2);
-}
-#header .arrow-section svg {
-  width: 50%;
+#header .main-title-contianer img {
+  margin-bottom: 3px;
+  margin-right: 25px;
 }
 
 #site-main {
@@ -440,21 +433,22 @@ body {
 
 h1 {
   text-transform: uppercase;
-  padding-top: 5%;
-  font-size: 40px;
-  margin: auto;
+  font-size: 18px;
 }
 
 h2 {
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
-  opacity: 0;
 }
 
 h3 {
   text-transform: uppercase;
   font-size: 16px;
+}
+
+a {
+  text-transform: uppercase;
 }
 
 .project-title {
@@ -469,8 +463,8 @@ h3 {
 
 p {
   margin: 0;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .subtitle {
@@ -498,14 +492,14 @@ input, textarea {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  justify-content: space-between;
+  height: 65vh;
+}
+.about a {
+  display: flex;
+  flex-direction: column;
 }
 
-.team-brief p {
-  font-size: 30px;
-  line-height: 32px;
-}
 .team-brief .types-container {
   margin-bottom: 20px;
 }
@@ -519,12 +513,6 @@ input, textarea {
 #team {
   position: relative;
   height: 100vh;
-}
-#team h2 {
-  position: absolute;
-  top: 51vh;
-  left: 40px;
-  z-index: 10;
 }
 #team .glide {
   margin-bottom: 70px;
@@ -552,9 +540,6 @@ input, textarea {
 #team article {
   margin-bottom: 20px;
   opacity: 0.1;
-}
-#team article:last-child {
-  margin: 0;
 }
 #team article:nth-child(1) {
   -webkit-animation: name-fadein-last 9s infinite ease 1.4s;
@@ -602,7 +587,7 @@ input, textarea {
   }
 }
 #projects {
-  padding-top: 110px;
+  padding-top: 60px;
 }
 #projects .container-main-image {
   width: 100%;
@@ -759,16 +744,24 @@ input, textarea {
   display: inline-block;
   background-color: #E58D16;
   color: #F8F8F8;
-  border-radius: 30px;
-  padding: 20px 35px;
+  border-radius: 10px;
+  padding: 20px 30px;
   transition: all 0.7s ease;
-  border: 2px solid #F8F8F8;
   font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 100%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.button:hover {
-  background-color: transparent;
-  color: #E58D16;
-  border: 2px solid #E58D16;
+.button img {
+  width: 100%;
+  padding: 12px;
+}
+.button.icon {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
 }
 
 .section-title {
@@ -776,7 +769,7 @@ input, textarea {
   text-align: left;
   align-self: start;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 .section-title::before {
   content: "";
@@ -789,11 +782,6 @@ input, textarea {
   border-radius: 2px;
   background-color: #E58D16;
   position: absolute;
-}
-
-.slide-in-left {
-  opacity: 100;
-  animation: slideInLeft ease 1s;
 }
 
 .project-title {

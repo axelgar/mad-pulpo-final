@@ -5,7 +5,7 @@
   text-align: left;
   align-self: start;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
 
   &::before {
@@ -20,11 +20,6 @@
     background-color: $color-main-orange;
     position: absolute;
   }
-}
-
-.slide-in-left {
-  opacity: 100;
-  animation: slideInLeft ease 1s;
 }
 
 .project-title {

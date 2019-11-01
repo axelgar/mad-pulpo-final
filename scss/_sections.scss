@@ -2,16 +2,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  justify-content: space-between;
+  height: 65vh;
+
+  a {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .team-brief {
-
-  p {
-    font-size: 30px;
-    line-height: 32px;
-  }
 
   .types-container {
     margin-bottom: 20px;
@@ -31,13 +31,6 @@
 #team {
   position: relative;
   height: 100vh;
-
-  h2 {
-    position: absolute;
-    top: 51vh;
-    left: 40px;
-    z-index: 10;
-  }
 
   .glide {
     margin-bottom: 70px;
@@ -71,10 +64,6 @@
   article {
     margin-bottom: 20px;
     opacity: 0.1;
-
-    &:last-child {
-      margin: 0;
-    }
 
     &:nth-child(1) {
       -webkit-animation: name-fadein-last 9s infinite ease 1.4s;
@@ -133,7 +122,7 @@
 }
 
 #projects {
-  padding-top: 110px;
+  padding-top: 60px;
 
   .container-main-image {
     width: 100%;
